@@ -48,8 +48,8 @@ const walls = [
 World.add(world, walls);
 
 // Adjust grid creation to spread objects across the screen
-const rows = 50;
-const cols = 50;
+const rows = 30;
+const cols = 30;
 const squareSize = 8; // Increase square size for better visibility
 const spacingX = (window.innerWidth - cols * squareSize) / (cols + 2); // Dynamic horizontal spacing
 const spacingY = (window.innerHeight - rows * squareSize) / (rows + 2); // Dynamic vertical spacing;
