@@ -119,7 +119,7 @@ Matter.Events.on(engine, 'beforeUpdate', () => {
 
         // Adjust stiffness based on proximity (closer = higher stiffness)
         const proximityFactor = Math.max(0.1, 1 - distance / (squareSize * 2)); // Scale factor (reduce divisor for stronger effect)
-        constraint.stiffness = 0.8 + 0.8 * proximityFactor; // Base stiffness + amplified proximity adjustment
+        constraint.stiffness = 0.98 + 0.8 * proximityFactor; // Base stiffness + amplified proximity adjustment
 
         // Optional: Log stiffness for debugging
         if (engine.timing.timestamp % 5000 < 16) { // Log approximately once per second
