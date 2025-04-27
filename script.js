@@ -48,8 +48,8 @@ const walls = [
 World.add(world, walls);
 
 // Adjust grid creation to spread objects across the screen
-const rows = 100;
-const cols = 100;
+const rows = 50;
+const cols = 50;
 const squareSize = 8; // Increase square size for better visibility
 const spacingX = (window.innerWidth - cols * squareSize) / (cols + 2); // Dynamic horizontal spacing
 const spacingY = (window.innerHeight - rows * squareSize) / (rows + 2); // Dynamic vertical spacing;
@@ -119,7 +119,7 @@ Matter.Events.on(engine, 'beforeUpdate', () => {
 
         // Adjust stiffness based on proximity (closer = higher stiffness)
         const proximityFactor = Math.max(0.1, 1 - distance / (squareSize * 2)); // Scale factor (reduce divisor for stronger effect)
-        constraint.stiffness = 0.98 + 0.8 * proximityFactor; // Base stiffness + amplified proximity adjustment
+        constraint.stiffness = 0.01 + 0.8 * proximityFactor; // Base stiffness + amplified proximity adjustment
 
         // Optional: Log stiffness for debugging
         if (engine.timing.timestamp % 5000 < 16) { // Log approximately once per second
