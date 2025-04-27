@@ -51,8 +51,8 @@ World.add(world, walls);
 const rows = 100;
 const cols = 100;
 const squareSize = 8; // Increase square size for better visibility
-const spacingX = (window.innerWidth - cols * squareSize) / (cols + 1); // Dynamic horizontal spacing
-const spacingY = (window.innerHeight - rows * squareSize) / (rows + 1); // Dynamic vertical spacing;
+const spacingX = (window.innerWidth - cols * squareSize) / (cols + 2); // Dynamic horizontal spacing
+const spacingY = (window.innerHeight - rows * squareSize) / (rows + 2); // Dynamic vertical spacing;
 
 // Initialize grid array
 const grid = Array.from({ length: cols }, () => Array(rows).fill(null));
